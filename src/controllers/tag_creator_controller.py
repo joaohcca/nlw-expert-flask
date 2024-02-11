@@ -1,5 +1,5 @@
 from typing import Dict
-from src.drivers.barcode_handler import BarCodeHandler
+from src.drivers.barcode_handler import BarcodeHandler
 class TagCreatorController:
     '''
         responsability for implementing business logic
@@ -12,7 +12,7 @@ class TagCreatorController:
 
 
     def __create_tag(self, product_code: str) -> str:
-        barcode_handler = BarCodeHandler()
+        barcode_handler = BarcodeHandler()
         path_from_tag = barcode_handler.create_barcode(product_code)
         return path_from_tag
 
